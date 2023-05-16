@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/62d19c521b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
         <nav>
             <img src="images/Jegjeg.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Director and Front End Developer</p>
+            <p>Video Editor and UI/UX</p>
             <h1>Hi, I'm <span> Jeg</span><br>From Philippines</h1>
         </div>
 
     </div>
 </div>
-/* about */
+
+<!-- about  -->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -34,11 +38,167 @@
                 <img src="images/user.jpg">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p>John Errol Gerard V. Modrigo, a 23-year-old residing in the Philippines. 
+                    You recently graduated from the National Teachers College with a Bachelor of 
+                    Science degree in Information Technology, specializing in front-end development. 
+                    Your proficiency in HTML, CSS, and JavaScript demonstrates your strong technical 
+                    skills and ability to create visually appealing and functional websites.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Video Editor</span><br>Editing Music Videos</li>
+                        <li><span>Photography</span><br>Shooting and Editing Photos</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Current</span><br>A Freelance Photographer and Music Video Editor</li>
+                        <li><span>2023</span><br>Internship at Stacktrek</li>
+                        <li><span>2021-2023</span><br>Barista at But first Coffee</li>
+                        <li><span>2019-2020</span><br>Chat Support at Inspiro Inc.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>BSIT at National Teachers College</li>
+                        <li><span>2018</span><br>Food Technology at Jose Rizal University</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
-    
+    <!-- Services -->
+
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Description of web services</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-camera"></i>
+                <h2>Photography</h2>
+                <p>Description of photography service</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2>Video Editor</h2>
+                <p>Description of Video Editing</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- portfolio -->
+<div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Photography</h3>
+                        <p>A collaboration with 1096 group</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpg">
+                    <div class="layer">
+                        <h3>Video Editing</h3>
+                        <p>A Collaboration with Yam$</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    </div>
+                    <div class="work">
+                    <img src="images/Portfolio.png">
+                    <div class="layer">
+                        <h3>Portfolio</h3>
+                        <p>Creating a webpage design</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">View More</a>
+        </div>
+</div>
+
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> jegmodrigo@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09351216931</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100057904533153"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a> 
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" row= "6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2"> Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-solid fa-copyright"></i>  All rights reserved by Jeg </p>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var siemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        siemenu.style.right = "0px";
+    }
+    function closemenu(){
+        siemenu.style.right = "-200px";
+    }
+
+</script>
+
 </body>
 </html>
