@@ -1,0 +1,19 @@
+const Singleton = (() => {
+    let instance = null;
+  
+    function createInstance() {
+        // constructor code here
+        return {
+            // object properties here
+        };
+    }
+  
+    return {
+        getInstance: () => {
+            if (!instance) {
+                instance = createInstance();
+            }
+            return instance;
+        }
+    };
+})();
